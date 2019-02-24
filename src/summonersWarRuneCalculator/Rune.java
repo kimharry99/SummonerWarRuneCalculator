@@ -3,6 +3,7 @@ package summonersWarRuneCalculator;
 public class Rune {
 	int type, number;
 	int rarity = 4;
+	int runeLevel=12;
 	int []mainStat = { 0, 0, 0, 0, 0, 0, 0, 0 };
 	int[] subStatArray = { 0, 0, 0, 0, 0, 0, 0, 0 };
 	int []prefixStat = { 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -33,6 +34,17 @@ public class Rune {
 		this.subStatArray = _statArray;
 	}
 
+	public Rune(int _type, int _number, int _rarity, int _runeLevel, int[] _mainStat, int[] _prefixStat, int[] _statArray) {
+		this.type = _type;
+		this.number = _number;
+		this.rarity=_rarity;
+		this.runeLevel=_runeLevel;
+		this.mainStat = _mainStat;
+		this.prefixStat = _prefixStat;
+		this.subStatArray = _statArray;
+	}
+
+	
 	public Rune(int _type, int _number, int[] _mainStat, int[] _prefixStat, int[] _statArray, String _monster) {
 		this.type = _type;
 		this.number = _number;

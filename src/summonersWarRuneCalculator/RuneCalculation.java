@@ -18,8 +18,14 @@ public class RuneCalculation {
 					tempScore += statGradeArray[1][j] * scoreArray[i][j];
 				}
 			}
-			runeScore = (runeScore>tempScore)?runeScore:tempScore;
+			if(runeScore>tempScore) {
+				runeScore = tempScore;
+				maxScoreRole=i;
+			}
 		}
+		runeScore = Math.round((runeScore*100)/100.0);
+		System.out.println("�� ���� ���� ���� ������ 	"+roleArray[maxScoreRole]+" ���� "+runeScore+" �� �Դϴ�.");
+		return runeScore;
 	}
 
 	public void calculateRunePotentional(Rune _rune) {

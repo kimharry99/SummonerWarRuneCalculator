@@ -4,9 +4,11 @@ public class RuneCalculation {
 	double[][] scoreArray = { { 0.5, 1, 0.5, 1, 1, 1, 0, 0 }, { 1, 1, 0.5, 0.5, 1, 1, 0, 0 },
 			{ 0.5, 0, 1, 1, 1, 1, 0.5, 0 }, { 1, 0, 1, 1, 0, 0, 1, 0.5 }, { 1, 0, 1, 1, 0, 0, 1, 0.5 },
 			{ 1, 1, 0.5, 1, 1, 0.5, 0, 0 }, { 1, 0.5, 1, 1, 0, 0, 0.5, 1 }, { 1, 0, 1, 1, 1, 0.5, 0, 0.5 } };
+	String[] roleArray= {"�ص��","���̵� ���","���� ���","���� ��","����","����� ����","�����","����"};
 
-	public void calculateRuneScore(Rune _rune) {
+	public double calculateRuneScore(Rune _rune) {
 		double[][] statGradeArray = this.calculateStatGrade(_rune.prefixStat, _rune.subStatArray);
+		int maxScoreRole=0;
 		double runeScore = 0;
 		for (int i = 0; i < scoreArray.length; i++) {
 			double tempScore =0;

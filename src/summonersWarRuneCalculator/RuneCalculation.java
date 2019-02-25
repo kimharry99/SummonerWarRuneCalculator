@@ -4,7 +4,7 @@ public class RuneCalculation {
 	double[][] scoreArray = { { 0.5, 1, 0.5, 1, 1, 1, 0, 0 }, { 1, 1, 0.5, 0.5, 1, 1, 0, 0 },
 			{ 0.5, 0, 1, 1, 1, 1, 0.5, 0 }, { 1, 0, 1, 1, 0, 0, 1, 0.5 }, { 1, 0, 1, 1, 0, 0, 1, 0.5 },
 			{ 1, 1, 0.5, 1, 1, 0.5, 0, 0 }, { 1, 0.5, 1, 1, 0, 0, 0.5, 1 }, { 1, 0, 1, 1, 1, 0.5, 0, 0.5 } };
-	String[] roleArray= {"�ص��","���̵� ���","���� ���","���� ��","����","����� ����","�����","����"};
+	String[] roleArray= {"Main Dealer","Raid Dealer","DEF Dealer","Takner","Healer","ATK Healer","Debuffer","Bruiser"};
 
 	public double calculateRuneScore(Rune _rune) {
 		double[][] statGradeArray = this.calculateStatGrade(_rune.prefixStat, _rune.subStatArray);
@@ -24,7 +24,7 @@ public class RuneCalculation {
 			}
 		}
 		runeScore = Math.round((runeScore*100)/100.0);
-		System.out.println("�� ���� ���� ���� ������ 	"+roleArray[maxScoreRole]+" ���� "+runeScore+" �� �Դϴ�.");
+		System.out.println("The best role of this rune is "+roleArray[maxScoreRole]+" and the score is "+runeScore+".");
 		return runeScore;
 	}
 

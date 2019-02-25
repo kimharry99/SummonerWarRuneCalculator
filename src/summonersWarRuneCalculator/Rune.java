@@ -1,14 +1,14 @@
 package summonersWarRuneCalculator;
 
 public class Rune {
-	String[] typeArray = {"폭주","신속","반격","칼날","집중","활력","맹공","절망","수호","인내","보호"};
+	String[] typeArray = {"Violent","Swift","Revenge","Blade","Focus","Energy","Fatal","Despair","Guard","Endure","Shield"};
 	int type=0, number=1;
 	int rarity = 4;
 	int runeLevel=12;
 	int []mainStat = { 0, 0, 0, 0, 0, 0, 0, 0 };
 	int[] subStatArray = { 0, 0, 0, 0, 0, 0, 0, 0 };
 	int []prefixStat = { 0, 0, 0, 0, 0, 0, 0, 0 };
-	String monster = "물피닉스";
+	String monster = "pheonix (water)";
 	boolean searchable=true;
 
 	public Rune(int _type, int _number, int[] _mainStat, int[] _subStatArray) {

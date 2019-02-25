@@ -18,13 +18,12 @@ public class RuneCalculation {
 					tempScore += statGradeArray[1][j] * scoreArray[i][j];
 				}
 			}
-			if(runeScore>tempScore) {
+			if(runeScore<tempScore) {
 				runeScore = tempScore;
 				maxScoreRole=i;
 			}
 		}
-		runeScore = Math.round((runeScore*100)/100.0);
-		System.out.println("The best role of this rune is "+roleArray[maxScoreRole]+" and the score is "+runeScore+".");
+		System.out.println("The best role of this rune is "+roleArray[maxScoreRole]+" and the score is "+runeScore);
 		return runeScore;
 	}
 
@@ -39,24 +38,25 @@ public class RuneCalculation {
 			if (0 <= i && i <= 2) {
 				gradeArray[0][i] = _prefixStat[i] / 6.5;
 			} else if (2 < i && i < 5) {
-				gradeArray[0][i] = _prefixStat[i] / 5;
+				gradeArray[0][i] = _prefixStat[i] / 5.0;
 			} else if (i == 5) {
 				gradeArray[0][i] = _prefixStat[i] / 5.5;
 			} else {
-				gradeArray[0][i] = _prefixStat[i] / 6;
+				gradeArray[0][i] = _prefixStat[i] / 6.0;
 			}
 		}
 		for (int i = 0; i < gradeArray[1].length; i++) {
 			if (0 <= i && i <= 2) {
-				gradeArray[0][i] = _subStat[i] / 6.5;
+				gradeArray[1][i] = _subStat[i] / 6.5;
 			} else if (2 < i && i < 5) {
-				gradeArray[0][i] = _subStat[i] / 5;
+				gradeArray[1][i] = _subStat[i] / 5.0;
 			} else if (i == 5) {
-				gradeArray[0][i] = _subStat[i] / 5.5;
+				gradeArray[1][i] = _subStat[i] / 5.5;
 			} else {
-				gradeArray[0][i] = _subStat[i] / 6;
+				gradeArray[1][i] = _subStat[i] / 6.0;
 			}
 		}
+		System.out.println("statGradeArray : "+gradeArray[1][3]);
 		return gradeArray;
 	}
 
